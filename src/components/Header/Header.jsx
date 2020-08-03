@@ -9,12 +9,10 @@ import {
     List,
     ListItem,
     ListItemText,
-    Menu,
-    MenuItem,
-    Divider,
     SwipeableDrawer,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import pages from "../pages";
 
 const ToolbarHeader = styled(Toolbar)`
     backdrop-filter: blur(16px);
@@ -38,20 +36,10 @@ const ToolbarHeader = styled(Toolbar)`
     }
 `;
 
-const VerticalAlignDiv = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
 const VerticalAlignToolbar = styled(ToolbarGroup)`
     display: flex;
     align-items: center;
     justify-content: center;
-`;
-
-const MenuButtonWrapper = styled.div`
-    margin-right: 12px;
 `;
 
 const MenuContent = styled.div`
@@ -88,23 +76,7 @@ const AppLogo = () => (
 const Header = () => {
     const [menuIsOpen, setMenuOpen] = useState(false);
 
-    const drawerPages = [
-        {
-            key: "header_use_state",
-            to: "./use-state",
-            label: "Direct State Mutation",
-        },
-        {
-            key: "header_react_keys",
-            to: "./react-keys",
-            label: "React Keys",
-        },
-        {
-            key: "header_use_memo",
-            to: "./use-memo",
-            label: "Use Memo Hook",
-        },
-    ];
+    const drawerPages = pages.filter((page) => page.completed === true);
 
     return (
         <ToolbarHeader>

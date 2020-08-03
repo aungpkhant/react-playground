@@ -3,11 +3,6 @@ import styled from "styled-components";
 import constants from "../constants";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 
-const StyledContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-`;
-
 const StyledDiv = styled.div`
     display: flex;
     flex-direction: column;

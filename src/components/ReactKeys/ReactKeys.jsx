@@ -55,6 +55,17 @@ const fillInputs = () => {
     }
 };
 
+/* 
+Anti Pattern: Using index as react key
+Consequences: It may break the application and display wrong data
+Exception:
+The list and items are static and do not change
+The items in list have no ids
+The list is never filtered or reordered
+If all three of these conditions are met, index may be used as key
+
+*/
+
 const InformationComponent = () => {
     return (
         <div>
@@ -65,6 +76,11 @@ const InformationComponent = () => {
                 have been changed/added/removed. Doing so can lead to bugs in
                 the UI as shown below. Even though the correct item was removed,
                 the value in the input field is wrong.
+                <br />
+                Using index as key should be a last resort and only if the
+                following conditions are met: The list is static and will not
+                change. The list is never reordered nor filtered. The list
+                elements have no natural IDs.
             </p>
         </div>
     );
@@ -115,14 +131,3 @@ const ReactKeys = () => {
 };
 
 export default ReactKeys;
-
-/* 
-Anti Pattern: Using index as react key
-Consequences: It may break the application and display wrong data
-Exception:
-The list and items are static and do not change
-The items in list have no ids
-The list is never filtered or reordered
-If all three of these conditions are met, index may be used as key
-
-*/

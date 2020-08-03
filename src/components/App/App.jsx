@@ -43,11 +43,7 @@ const App = ({ location }) => {
                     <Header />
                     <StyledBodyDiv>
                         <Switch>
-                            <Route
-                                exact
-                                path="/"
-                                component={DirectStateMutation}
-                            />
+                            <Route exact path="/" component={Home} />
                             <Route
                                 exact
                                 path="/use-state"
