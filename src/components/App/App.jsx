@@ -11,6 +11,8 @@ import constants from "../constants";
 import Home from "../Home/Home";
 import DirectStateMutation from "../DirectStateMutation/DirectStateMutation";
 import ReactKeys from "../ReactKeys/ReactKeys";
+import ThisBinding from "../ThisBinding/ThisBinding";
+import UseMemo from "../UseMemo/UseMemo";
 
 const StyledDiv = styled.div`
     position: relative;
@@ -54,6 +56,12 @@ const App = ({ location }) => {
                                 path="/react-keys"
                                 component={ReactKeys}
                             />
+                            <Route
+                                exact
+                                path="/this_binding"
+                                component={ThisBinding}
+                            />
+                            <Route exact path="/use-memo" component={UseMemo} />
                         </Switch>
                     </StyledBodyDiv>
                 </StyledDiv>

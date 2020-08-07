@@ -12,10 +12,16 @@ const pages = [
         completed: true,
     },
     {
+        key: "header_this_binding",
+        to: "./this_binding",
+        label: "this Binding",
+        completed: false,
+    },
+    {
         key: "header_use_memo",
         to: "./use-memo",
         label: "Use Memo Hook",
-        completed: false,
+        completed: true,
     },
 ];
 
